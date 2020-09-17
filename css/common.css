@@ -48,7 +48,7 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 
 .introAni {
     position: fixed; top:0 ; left: 0; right: 0; bottom: 0; /* 상하좌우 값 0으로 주면 바디랑 크기가같은 전체화면 */ 
-    background: rgba(1,1,1,0.5); z-index : 999999999999;  }
+    background: rgba(0,0,0); z-index : 999999999999;  }
 
 
-.introAni img { position: absolute; top: 50%; left: 50%; transform: translate(-50%,50%); transition: all 3s;} 
+.introAni img { position: absolute; top: 45%; left: 50%; transform: translate(-45%,-50%);} 

@@ -3,12 +3,12 @@
 $('#boxArea').load('main.html')
 /* 로딩페이지 연결*/
 var minCnt = setInterval(minusCount,1000);
-var k = 5;
+var k = 3;
 function minusCount(){
     k--;  
     if(k===0){
         clearInterval(minCnt);
-        $('.introAni').fadeOut(500);
+        $('.introAni').fadeOut(300);
             return false;
         }
     }
