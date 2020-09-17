@@ -52,7 +52,7 @@ $('.slide_inner').slick({
 
     
 //border에 자세히 보기 버튼에 notice 페이지 연결
-$('#section > .board_box cf row > ul .more').on('click',function(e){
+$('.more').on('click',function(e){
     e.preventDefault()
     var url = $(this).attr('href')
     $('#containerBox').remove()
