@@ -1,0 +1,81 @@
+@charset "utf-8";
+/************< CONTACT의 온라인 문의 페이지 페이지 CSS >***********/
+.submn4 .contact_bg { width: 100%; height: 384px; overflow:hidden ;}
+.submn4 .contact_bg {background-image: url(../image/contactpg_bg.jpg);background-size: cover;background-repeat: no-repeat;position: relative; }
+.contact_bg h1 {font-size: 2.5em; color: #fff; font-weight: 600;padding: 150px 0 100px 0; text-align: center; text-transform: uppercase; transition: all 2s;}
+.contact_bg ul { width: 100%;height:66.67px ; background: rgba(13,48,120,0.8); position: absolute;bottom: 0; }
+.contact_bg li > a {font-size: 16px; color: #000; padding: 20px 40px; background: #fff; line-height: 180%;position: absolute;top:50% ;left: 50%;transform: translate(-50%,-50%);  }
+
+.counsel_box { margin: 80px 260.333px 100px;}
+.counsel_box h2 {margin: 20px 30px; padding: 25px; font-size: 30px; font-weight: 400 ; color: #004A8D; position: relative;}
+.counsel_box h2::before {content: ''; position: absolute; top:50% ; left:0;transform: translateY(-50%) ;border: 3px solid #004A8D; width: 4px; height: 4px;}
+.info_text tr { border-bottom: 1px #e5e5e5 solid; }
+.info_text tr:first-child {border-top: 1px solid #666;}
+.info_text td:nth-child(2n+1) {width: 20%; text-align: center;background: #f7f7f7;font-size: 14px; line-height: 180%; color: #000; padding: 9px;}
+.info_text tr td > input {height: 38.5px; border:1px solid #ddd; margin-left: 8px;}
+.info_text .name_box {width: 356px;}
+.info_text .email_box {width: 490px;}
+textarea { width: 100%; height: 300px; margin: 8px 8px!important; padding: 20px ; border: none; background: #eee; }
+.info_text input:last-child { border:none;}
+.btn button { font-size:14px ; color: #666;padding: 6.5px 20px ;border: 1px solid #fff; }
+.btn {margin-top:20px ;text-align: center;}
+
+/*****************<BOARD페이지 상단 공통 CSS>*************************/
+/* BOARD 페이지 공통내용 */
+.submn5 .board_bg {width: 100%; height: 384px; overflow:hidden ; background-image: url(../image/sub-menu-bg5.jpg);background-size: cover;background-repeat: no-repeat;position: relative;}
+.board_bg h1 {font-size: 2.5em; color: #fff; font-weight: 600;padding: 150px 0 100px 0; text-align: center; text-transform: uppercase; transition: all 2s;}
+.board_bg .menu_text {width:100%;height:66.67px ; background: rgba(13,48,120,0.8); position: absolute; bottom: 0;}
+.board_bg ul { width: 43.125% ; margin: 0 auto;}
+.board_bg li { width: 24% ;font-size: 16px; color: #fff; padding: 20px 0; background:  rgba(13,48,120,0.8); line-height: 180%;float: left; text-align:center;}
+.board_bg li.on {background: #fff;color:#000}
+/* 공지사항 페이지 */
+.notice_cnt { margin: 0 360.333px 100px; padding : 80px 0 100px; position: relative;}
+.notice_table { margin: 20px 0 50px; position: relative;}
+.notice_table table { font-size: 1em;}
+.notice_table col:nth-child(1) { width: 10%;}
+.notice_table col:nth-child(2) { width: auto;}
+.notice_table col:nth-child(3) { width: 10%;}
+.notice_table th {background:#f2f2f2 ; border-bottom: 1px solid #ddd; border-top: 1px solid #666 ; padding: 10px 5px;}
+.notice_table td { padding: 10px 5px;} 
+.notice_table tbody td:nth-child(1),
+.notice_table tbody td:nth-child(3){text-align: center;}
+.notice_table tr { height: 20px;}
+.notice_table tr:hover {background: #f2f2f2; }
+
+.notice_cnt .pagelist { margin: 20px 0; font-size: 12px; position: absolute; left: 25%; padding-bottom: 20px;}
+.notice_cnt .pagelist span {display: inline-block; background: #f2f2f2; padding: 5px 10px; border-radius: 5px;}
+.notice_cnt .pagelist a {display: inline-block; padding: 5px 7px; border: solid  1px #ddd; transition: all 1s; border-radius: 5px;}
+.notice_cnt .pagelist a.on {border: 1px solid #666; background: #ddd; font-weight: 600;}
+.notice_cnt .pagelist a:hover {background: #ddd; font-weight: 600;}
+.notice_cnt .selbox {position: absolute; bottom: 30px; right: 15%; margin: 20px 0;}
+.notice_cnt .selbox select { height: 28px; margin-left: 100px; border-radius: 5px;}
+.notice_cnt .selbox input[type=text] {height: 28px; width: 200px; text-indent: 1em; border: 1px solid #ddd; border-radius: 5px;}
+.notice_cnt .selbox input[type=submit] {height: 28px; background: #ddd; padding: 0 5px; border-radius: 5px;} 
+/* 문의 답변 페이지 */
+.qna_cnt { margin: 0 360.333px 100px; padding : 80px 0 100px; position: relative;}
+.qna_cnt > .page_tit { margin-bottom: 0;}
+.qna_cnt > span { float: right; margin: 0px 10px 10px 10px; padding: 10px 40px; border: 1px solid #ddd; border-radius: 5px; background: #f2f2f2; transition: all 1s;}
+.qna_cnt > span:hover { font-weight: 800; background: #fff;}
+.qna_table { margin: 20px 0 50px; position: relative;}
+.qna_table table { font-size: 1em;}
+.qna_table col:nth-child(1) { width: 7%;}
+.qna_table col:nth-child(2) { width: auto;}
+.qna_table col:nth-child(3) { width: 14%;}
+.qna_table col:nth-child(4) { width: 7%;}
+.qna_table th {background:#f2f2f2 ; border-bottom: 1px solid #ddd; border-top: 1px solid #666 ; padding: 10px 5px;}
+.qna_table td { padding: 10px 5px;}
+.qna_table tbody td:nth-child(1),
+.qna_table tbody td:nth-child(3),
+.qna_table tbody td:nth-child(4) {text-align: center;}
+.qna_table tr { height: 20px;}
+.qna_table tr:hover {background: #f2f2f2; }
+.qna_cnt .pagelist{ margin: 20px 0; font-size: 12px; position: absolute; left: 25%; padding-bottom: 20px;}
+.qna_cnt .pagelist span {display: inline-block; background: #f2f2f2; padding: 5px 10px; border-radius: 5px;}
+.qna_cnt .pagelist a {display: inline-block; padding: 5px 7px; border: solid  1px #ddd; transition: all 1s; border-radius: 5px;}
+.qna_cnt .pagelist a.on {border: 1px solid #666; background: #ddd; font-weight: 600;}
+.qna_cnt .pagelist a:hover {background: #ddd; font-weight: 600;}
+ 
+.qna_cnt .selbox {position: absolute; bottom: 30px; right: 15%; margin: 20px 0;}
+.qna_cnt .selbox select { height: 28px; margin-left: 100px; border-radius: 5px;}
+.qna_cnt .selbox input[type=text] {height: 28px; width: 200px; text-indent: 1em; border: 1px solid #ddd; border-radius: 5px;}
+.qna_cnt .selbox input[type=submit] {height: 28px; background: #ddd; padding: 0 5px; border-radius: 5px;} 

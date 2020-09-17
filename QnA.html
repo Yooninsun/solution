@@ -1,0 +1,148 @@
+<div id="containerBox">
+    <section id="sub_body" class="submn5">
+        <div class="sub_menus">
+            <div class="board_bg cf">
+                <h1>COMMUNITY</h1>
+                <div class="menu_text">
+                    <ul>
+                        <li>
+                            <a href="notice.html">공지사항</a>
+                        </li>
+                        <li >
+                            <a href="#">뉴스&amp;보도자료</a>
+                        </li>
+                        <li  class='on'>
+                            <a href="QnA.html">문의답변</a>
+                        </li>
+                        <li>
+                            <a href="#">자주하는질문</a>
+                        </li>
+                        <li>
+                            <a href="#">매장안내</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="qna_cnt">
+                <h2 class="page_tit">문의게시판</h2>
+                <span class="write"><a  href="#">글쓰기</a></span>
+                <div class="qna_table">
+                    <table>
+                        <caption>문의게시판</caption>
+                        <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일자</th>
+                        </thead>        
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다1</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다2</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다3</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다4</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다5</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다6</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다7</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다8</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다9</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="#">기업표준 반응형 홈페이지 디자인에 관하여 견적 문의드립니다10</a></td>
+                                    <td>윤인선</td>
+                                    <td>2020-09-16</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+                <div class="pagelist">
+                    <span><i class="fas fa-angle-double-left"></i></span>
+                    <a class="on" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <span><i class="fas fa-angle-double-right"></i></span>
+                </div>
+                <form action="#" method="post" class="selbox">
+                    <fieldset>
+                        <select name="seltype" id="seltype">
+                            <option value="subject">제목</option>
+                            <option value="content">내용</option>
+                            <option value="content">내용</option>
+                        </select>
+                        <input type="text" name="keyword" id="keyword">
+                        <input type="submit" value="검색">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    (function($){
+    $('.board_bg li > a ').on('click',function(e){
+    e.preventDefault()
+    var url = $(this).attr('href')
+    $('#containerBox').remove()
+    $('#boxArea').load(url)
+})    
+})(jQuery)
+</script>

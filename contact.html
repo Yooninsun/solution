@@ -1,0 +1,57 @@
+    <div id="containerBox">
+        <section id="sub_body" class="submn4">
+            <div class="sub_menus">
+                <div class="contact_bg cf">
+                    <h1>INQUIRY</h1>
+                    <ul>
+                        <li>
+                            <a href="contact.html">온라인 문의</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="counsel_box row">
+                    <h2 class="page_tit">견적문의하기</h2>
+                    <form action="#" method="post" class="counsel_form">
+                        <fieldset>
+                            <legend>견적문의 메일보내기</legend>
+                            <table class="info_text">
+                                <tr>
+                                    <td><label for="name_lbl" class="tit_lbl">이름(업체명)</label></td>
+                                    <td><input type="text" id="name_lbl" class="name_box"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email_lbl" class="tit_lbl">답변받을 이메일</label></td>
+                                    <td><input type="text" id="email_lbl" class="email_box"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="counsel_lbl" class="tit_counsel">문의 내용</label></td>
+                                    <td><textarea name="counsel" id="counsel_lbl" class="counsel_box" placeholder="반응형 웹페이지 제작 견정상담 요청 내용을 입력해주세요(500글자 내외)" maxlength="500"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>파일첨부</td>
+                                    <td><input type='file' class='file_box' name='attachment[]' size='55'></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        <div class="btn">
+                            <button type="submit">확인</button>
+                            <button type="reset">취소</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </section>
+    </div>  
+    <script>
+        (function($){
+        $('.contact_bg li > a ').on('click',function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#containerBox').remove()
+        $('#boxArea').load(url)
+    })    
+})(jQuery)
+    </script>
+    
