@@ -13,8 +13,6 @@ function minusCount(){
         }
     }
 
-
-
 //로그인 페이지 연결
 $('.topmenu a:nth-child(4)').on('click',function(e){
     e.preventDefault()
@@ -68,4 +66,18 @@ $('.board > li > a').on('click',function(e){
 })
 
 
+
+/*****<스크롤 탑 값에 따라 헤더 아래쪽 선의 넓이 변경하기>*****/
+/* var scrollSize = $(document).heihgt() - $('#header').heihgt() - $(window).heihgt();
+var flag =true;
+    $(window).on('scroll',function(){
+        var sct = $(this).scrollTop();
+        var wid = (sct/scrollSize)*100+'%';
+        $('.scrolling-bar').css({
+            zIndex :99999,
+            opacity :1,
+            width :wid
+        })
+    })
+ */
 })(jQuery)
