@@ -11,7 +11,9 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .toparr { display: block; position: fixed; right: 50px;bottom: 70px; font-size: 40px; color: rgba(145, 145, 145, 0.7)}
 .toparr:hover {color: rgba(145,145,145,0.3)}
 
-#header {position: relative; width:100%; background:#fff;}
+#header {position: relative; z-index: 99999; width:100%; background:#fff;}
+/* #header.on { position:fixed; background:rgba(255,255,255,0.9); top:0; left:0; }     */
+#header .scrolling-bar { height: 5px; width: 0%; background: turquoise; opacity: 0;}
 .row { margin:0 auto; max-width: 1200px;}
 .topmenu { text-align:right ;padding:8px 0 ; line-height:180% ;}
 .topmenu a { padding-left: 1em; font-size: 17px}
@@ -25,17 +27,15 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .logo_nav .logo_text1{ font-size: 23px; font-weight:300;}
 .logo_nav .logo_text2{ font-size: 14px ; color: rgb(213,213,213)}
 .logo_nav .nav {position: absolute; top:3px ;right: 0;}
-.logo_nav .nav .depth1 > li {display: inline-block;
-    position: relative; transition: all 5s;}
+.logo_nav .nav .depth1 > li {display: inline-block; position: relative; transition: all 5s;}
 .logo_nav .nav .depth1 > li > a {display: inline-block; padding:27.5px 40px;font: 15px ;font-weight: 550; }
 .logo_nav .nav .depth1:hover .depth2 {display: block; z-index: 999;}
 .logo_nav .nav .depth1 > li:hover .depth2{ display: block;}
-.logo_nav .depth2 {position:absolute; top: 100%; left:0;
-     width: 100% ;padding:0 15px; text-align: center; display: none; transition: all 2s; }
+.logo_nav .depth2 {position:absolute; top: 100%; left:0; width: 100% ;padding:0 15px; text-align: center; display: none; transition: all 2s; }
 .logo_nav .depth2 > li {line-height: 38px; }
 .logo_nav .depth2 >  li > a {font-size: 15px ;z-index: 9;}
 .logo_nav .depth2 > li:hover {color:#03aace;}
-.deco_box {position: absolute; top: 100%;left: 0;width: 100%;height: 200px; background:rgb(241, 241, 241);display: none;}
+.deco_box {position: absolute; top: 113%;left: 0;width: 100%;height: 200px; background:rgb(241, 241, 241);display: none;}
 .depth1:hover + .deco_box {display: block; z-index: 99;}
 
 .footer { background: #222; text-align: center; font-size: 13px;  padding: 30px 0 0;}

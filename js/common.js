@@ -12,6 +12,50 @@ function minusCount(){
             return false;
         }
     }
+/* 스크롤 탑값에 따라 헤더아래쪽 선 너비 변경하기*/
+var scollSize = $(document).height()- $('#header').height() - $(window).height();
+var flag=true;
+	$(window).on('scroll',function() {
+        var sct = $(this).scrollTop();
+        var wid = (sct/scollSize)*100+'%';
+        $('.scrollig-bar')
+        .css({
+            zIndex : 99999999, 
+            opacity : 1, 
+            width : wid,
+            backgroundColor: '#00f',
+        });
+        
+        
+        // 스크롤탑값에 따라 헤더구역 고정시키기
+        if ( sct >= 136 && flag ) {
+            $('#header').css({
+                position:'fixed',
+                opacity:'0',
+                height:'0px',
+                backgroundColor:'rgba(255,255,255,0.9)'
+            }).stop().animate({
+                height:'136px',
+                opacity:'1',
+            }, 500)
+            flag = false;
+        } else if (sct===0 && !flag ) {
+            $('#header').css({
+                position:'relative',
+                height:'0',
+                opacity:'0'
+            }).stop().animate({
+                opacity:1,
+                height:'136px',
+                backgroundColor:'rgba(255,255,255,1)'
+            }, 500)
+            flag=true
+        }
+
+	});
+
+
+
 
 //로그인 페이지 연결
 $('.topmenu a:nth-child(4)').on('click',function(e){
@@ -67,17 +111,4 @@ $('.board > li > a').on('click',function(e){
 
 
 
-/*****<스크롤 탑 값에 따라 헤더 아래쪽 선의 넓이 변경하기>*****/
-/* var scrollSize = $(document).heihgt() - $('#header').heihgt() - $(window).heihgt();
-var flag =true;
-    $(window).on('scroll',function(){
-        var sct = $(this).scrollTop();
-        var wid = (sct/scrollSize)*100+'%';
-        $('.scrolling-bar').css({
-            zIndex :99999,
-            opacity :1,
-            width :wid
-        })
-    })
- */
 })(jQuery)
