@@ -18,7 +18,7 @@ var flag=true;
 	$(window).on('scroll',function() {
         var sct = $(this).scrollTop();
         var wid = (sct/scollSize)*100+'%';
-        $('.scrollig-bar')
+        $('.scrolling-bar')
         .css({
             zIndex : 99999999, 
             opacity : 1, 
