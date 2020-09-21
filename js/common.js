@@ -13,9 +13,10 @@ function minusCount(){
         }
     }
 /* 스크롤 탑값에 따라 헤더아래쪽 선 너비 변경하기*/
-var scollSize = $(document).height()- $('#header').height() - $(window).height();
+
 var flag=true;
 	$(window).on('scroll',function() {
+        var scollSize = $(document).height()- $('#header').height() - $(window).height();
         var sct = $(this).scrollTop();
         var wid = (sct/scollSize)*100+'%';
         $('.scrollig-bar')
@@ -23,7 +24,7 @@ var flag=true;
             zIndex : 99999999, 
             opacity : 1, 
             width : wid,
-            backgroundColor: '#00f',
+           
         });
         
         

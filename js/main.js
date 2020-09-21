@@ -30,25 +30,25 @@ $('.slide_inner').slick({
         var banNear =$('.banner').offset().top -($(this).height()*0.8);
         if (sct >= banNear){
             $('.banner').addClass('on');
-        } else {
+        } else if(sct===0) {
             $('.banner').removeClass('on');
         }
 
         var proNear = $('.gallery').offset().top -($('.gallery').height()*0.8);
         if (sct >= proNear){
             $('.product').addClass('on');
-        } else {
+        } else if(sct===0){
             $('.product').removeClass('on');
         }
 
         var utubNear = $('.utube').offset().top -($('.utube').height()*0.8);
         if (sct >= utubNear){
             $('.utube').addClass('on');
-        } else {
+        } else if(sct===0) {
             $('.utube').removeClass('on');
         }
-
-    })
+        //else if(sct===0)을 넣어주면 스크롤 탑값이 0이 되었을때 띡 사라지는게 없어짐
+        })
 
     
 //border에 자세히 보기 버튼에 notice 페이지 연결

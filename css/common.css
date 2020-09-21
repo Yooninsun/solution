@@ -13,7 +13,7 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 
 #header {position: relative; z-index: 99999; width:100%; background:#fff;}
 /* #header.on { position:fixed; background:rgba(255,255,255,0.9); top:0; left:0; }     */
-#header .scrolling-bar { height: 5px; width: 0%; background: turquoise; opacity: 0;}
+#header .scrolling-bar {position: absolute;left: 0;bottom: -5px; height: 5px; width: 0%; background: turquoise; opacity: 0;z-index: 9999999;}
 .row { margin:0 auto; max-width: 1200px;}
 .topmenu { text-align:right ;padding:8px 0 ; line-height:180% ;}
 .topmenu a { padding-left: 1em; font-size: 17px}
