@@ -31,7 +31,7 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .logo_nav .nav .depth1 > li > a {display: inline-block; padding:27.5px 40px;font: 15px ;font-weight: 550; }
 /* .logo_nav .nav .depth1:hover .depth2 {display: block; z-index: 999;} */
 /* .logo_nav .nav .depth1 > li:hover .depth2{ display: block;} */
-.logo_nav .depth2 {position:absolute; top: 100%; left:0; width: 100% ;padding: 20px 15px; text-align: center; display: none; transition: all 2s; }
+.logo_nav .depth2 {position:absolute; top: 100%; left:0; width: 100% ;padding: 20px 15px; text-align: center; display: none; }
 .logo_nav .depth2 > li {line-height: 38px; }
 .logo_nav .depth2 >  li > a {font-size: 15px ;z-index: 9;}
 .logo_nav .depth2 > li:hover {color:#03aace;}

@@ -25,15 +25,13 @@ $('.nav').hover(
              width : '100%',
              left : 0,
              top : '100%',
-             height : 0,
-             backgroundColor :'rgb(241, 241, 241)'
-         }).animate({
-            height:'200px'
-         },1000)
+             height : '200px',
+             backgroundColor :'rgb(241, 241, 241)',
+             display : 'none'
+         }).stop().slideDown(1000)
     },
     function(){
-        $('.deco_box').slideUp(1000,'easeInQuint').remove();
-        $(this).find('.depth2').slideUp(1000)
+        $('.depth2, .deco_box').stop().slideUp(1000)
 
     }
 )
