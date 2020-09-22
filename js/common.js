@@ -12,16 +12,38 @@ function minusCount(){
             return false;
         }
     }
+// 데코박스 width 100%로 주기
+$('.nav').hover(
+    function(){
+         $('#header').append('<div class="deco_box"></div>');
+         $('.deco_box').fadeInDown(3000,'easeInQuint');
+         $('.deco_box').css({
+             position : 'absolute',
+             width : '100%',
+             left : 0,
+             top : '100%',
+             height : '200px',
+             backgroundColor :'rgb(241, 241, 241)'
+         })
+        
+    },
+    function(){
+        $('.deco_box').remove().fadeInDown(3000,'easeInQuint');
+    }
+)
+
+
 /* 스크롤 탑값에 따라 헤더아래쪽 선 너비 변경하기*/
-var scollSize = $(document).height()- $('#header').height() - $(window).height();
+var sct;
 var flag=true;
 	$(window).on('scroll',function() {
+        var scollSize = $(document).height()- $('#header').height() - $(window).height();
         var sct = $(this).scrollTop();
         var wid = (sct/scollSize)*100+'%';
         $('.scrolling-bar')
         .css({
             zIndex : 99999999, 
-            opacity : 1, 
+            opacity : 1,  
             width : wid,
            
         });
@@ -51,6 +73,37 @@ var flag=true;
             }, 500)
             flag=true
         }
+
+
+        var sct = $(this).scrollTop();
+        var ourNear = $('.our_work').offset().top - ($(this).height()*0.8);
+        if (sct >= ourNear){
+            $('.our_work').addClass('on');
+        } else {
+            $('.our_work').removeClass('on')
+        } 
+        
+        var banNear =$('.banner').offset().top -($(this).height()*0.8);
+        if (sct >= banNear){
+            $('.banner').addClass('on');
+        } else if(sct===0) {
+            $('.banner').removeClass('on');
+        }
+
+        var proNear = $('.gallery').offset().top -($('.gallery').height()*0.8);
+        if (sct >= proNear){
+            $('.product').addClass('on');
+        } else if(sct===0){
+            $('.product').removeClass('on');
+        }
+
+        var utubNear = $('.utube').offset().top -($('.utube').height()*0.8);
+        if (sct >= utubNear){
+            $('.utube').addClass('on');
+        } else if(sct===0) {
+            $('.utube').removeClass('on');
+        }
+        //else if(sct===0)을 넣어주면 스크롤 탑값이 0이 되었을때 띡 사라지는게 없어짐
 
 	});
 
