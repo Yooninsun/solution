@@ -15,20 +15,26 @@ function minusCount(){
 // 데코박스 width 100%로 주기
 $('.nav').hover(
     function(){
+        $(this).find('.depth2').slideDown(1000).css({
+            zIndex: 99999
+        })
          $('#header').append('<div class="deco_box"></div>');
-         $('.deco_box').fadeInDown(3000,'easeInQuint');
+         /* $('.deco_box').slideDown(3000,'easeInQuint'); */
          $('.deco_box').css({
              position : 'absolute',
              width : '100%',
              left : 0,
              top : '100%',
-             height : '200px',
+             height : 0,
              backgroundColor :'rgb(241, 241, 241)'
-         })
-        
+         }).animate({
+            height:'200px'
+         },1000)
     },
     function(){
-        $('.deco_box').remove().fadeInDown(3000,'easeInQuint');
+        $('.deco_box').slideUp(1000,'easeInQuint').remove();
+        $(this).find('.depth2').slideUp(1000)
+
     }
 )
 
