@@ -21,13 +21,17 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .topmenu a:nth-child(3) {color:plum;font-weight: 600}
 .logo_nav_outer {border-top: 1px solid #eee; }
 .logo_nav {position:relative; height:80px ;}
-.logo_nav .logo {display:inline-block; position:absolute; bottom:0; left: 0;text-align: center; padding: 14px 0;}
+.logo_nav .logo {/* display:inline-block; */ position:absolute; top:0; left: 0;text-align: center; padding: 14px 0;}
 .logo_nav .logo strong { font-size: 23px;}
 .logo_nav .logo_text1{ font-size: 23px; font-weight:300;}
 .logo_nav .logo_text2{ font-size: 14px ; color: rgb(213,213,213)}
-.logo_nav .nav {position: absolute; top:3px ;right: 0;}
+/* 모바일 햄버거 버튼 */
+.logo_nav .open_nav { display:none } 
+.logo_nav .close_nav { display:none } 
+
+.logo_nav .nav {position: absolute; top:0 ;right: 0;}
 .logo_nav .nav .depth1 > li {display: inline-block; position: relative; transition: all 5s;}
-.logo_nav .nav .depth1 > li > a {display: inline-block; padding:27.5px 40px;font: 15px ;font-weight: 550; }
+.logo_nav .nav .depth1 > li > a {display: inline-block; padding:27.5px 40px;font-size: 20px ;font-weight: 550; }
 /* .logo_nav .nav .depth1:hover .depth2 {display: block; z-index: 999;} */
 /* .logo_nav .nav .depth1 > li:hover .depth2{ display: block;} */
 .logo_nav .depth2 {position:absolute; top: 100%; left:0; width: 100% ;padding: 20px 15px; text-align: center; display: none; }
