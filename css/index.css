@@ -9,6 +9,35 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .section_outer .slide_outer {height: 646px; position: relative;}
 .section_outer .slide_inner {height: 100%;}
 .slide_outer .slide {height: 100%; background-size: cover; background-repeat:no-repeat; background-position: center; position: relative;}
+.slide_outer .slide.slick-active { animation: zoomOutmain 3s both 0.5s;}
+/* 슬라이드 이미지 작아지면서  */
+@-webkit-keyframes zoomOutmain {
+    from {
+      opacity: 1;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2);
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes zoomOutmain {
+    from {
+      opacity: 1;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2);
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
 .slide_outer .slide1 {background-image:url(../image/slider1.jpg) }
 .slide_outer .slide2 {background-image: url(../image/slider2.jpg) }
 .slide_outer .slide3 {background-image: url(../image/slider3.jpg) }
@@ -45,7 +74,8 @@ text-shadow: 1px 2px 2px rgba(0,0,0,0.3);}
 .our_work { padding: 80px 0; transition:all 2s;}
 .our_work h2 {text-align: center; font-size: 2em; font-weight: 600;color: #2a2a2a;margin-bottom: 30px;text-transform: uppercase}
 .our_work p {text-align: center; font-size: 15px; line-height: 180%;color:#666; padding-bottom: 50px;}
-.our_work .ourul .ourli { float: left; width: 25%;padding:0 15px; transition: all 2s;text-align: center;}
+.our_work .ourul { margin: 0 auto; padding-left: 20px;}
+.our_work .ourul .ourli { float: left; width: 23%; margin:0 0.7% ; transition: all 2s;text-align: center;}
 .our_work .ourul .ourli img {width: 100%; padding: 5px 0;}
 .our_work .ourul .ourli h3 { font-size: 20px; color: #333; padding-top:25px;text-transform: uppercase; font-weight: 400;}
 .our_work .ourul .ourli p {font-size:14px ; color: #666; line-height: 160%;
@@ -95,6 +125,8 @@ padding:10px 0 25px;}
 .video .tit h2 { font-size: 2em;color: #2a2a2a; margin: 0 auto;
     font-weight: 600; text-transform: uppercase;padding-bottom: 20px;}
 .video .tit p {color: #333; font-size: 15px; padding:20px 0 50px; }
+.video .utube  { position: relative;width: 100%; padding-top: 56.25%;}
+.video .utube iframe {position: absolute; width: 100%; top: 0; left: 0;}
 .video .utube.on {animation: fadeInRight 1s both;}   
 
 
