@@ -13,16 +13,28 @@ function minusCount(){
             return false;
         }
     }
-
-//윈도우 크기에 따라 nav 메뉴 작동법 다르게하기
+/*리사이즈 이벤트가 발생할때마다 윈도우 크기 구하기(리사이즈 부작용 없애기)*/
 init();
 init2();
 
-/*리사이즈 이벤트가 발생할때마다 윈도우 크기 구하기(리사이즈 부작용 없애기)*/
-$(window).on('resize', function(){
-    init()
-    init2()
-})
+function init2() {
+    var ww = $(window).width()
+    if(ww>767){
+        $('.depth1 >li ').hover(
+            function(){
+                $('.depth1 .depth2, .deco_box').stop().slideDown(300)
+            },
+            function(){
+                $('.depth1 .depth2, .deco_box').stop().slideUp(300)
+            }
+        )
+    }else {
+        $('.depth1 >li ').on('click',function(){
+            $(this).find('.depth2').stop().slideToggle(300);
+            $(this).siblings().find('.depth2').stop().sldieup(300)
+        })
+    } 
+}
 
 
 var flag =true;
@@ -39,29 +51,67 @@ function init(){
     }
 }
 
-function init2() {
-    var ww = $(window).width()
-    if(ww>767){
-        $('.depth1 > li ').hover(
-            function(){
-                $('.depth1 .depth2, .deco_box').stop().slideDown(300)
-            },
-            function(){
-                $('.depth1 .depth2, .deco_box').stop().slideUp(300)
-            }
-        )
-    }else {
-        $('.depth1 > li ').on('click',function(){
-            $(this).find('.depth2').stop().slideToggle(300);
-            $(this).siblings().each(function(){
-            if ($(this).find('.depth2').css('display') === 'block'){
-                $(this).find('.depth2').slideUp(300);
-                $(this).removeClass('on')
-                }
+$(window).on('resize', function(){
+    init()
+    init2()
+})
+
+//nav메뉴 호버시 depth2 슬라이드 효과
+/* $('.depth1 > li').hover(
+    function(){
+        winWidth = $(window).innerWidth();
+        if(winWidth > 767){
+            $('.depth1').find('.depth2').stop().slideDown(1000).css({
+                zIndex: 99999
             })
+            $('#header').append('<div class="deco_box"></div>');
+            $('.deco_box').css({
+                position : 'absolute',
+                width : '100%',
+                left : 0,
+                top : '100%',
+                height : '220px',
+                backgroundColor :'rgb(241, 241, 241)',
+                display : 'none'
+            }).stop().slideDown(1000)
+        }
+    },
+    function(){
+        winWidth = $(window).innerWidth();
+        if(winWidth > 767){
+            $('.depth1').find('.depth2').stop().slideUp(1000);
+            $('.deco_box').stop().sldieup(1000);
+        } else {
+            $('.deco_box').hide();
+            $(this).find('.depth2').stop().slideUp(1000);
+        }
+    }
+
+
+); */
+
+/* $('.nav > li').hover(
+    function(){
+        $(this).find('.depth2').slideDown(1000).css({
+            zIndex: 99999
         })
-    } 
-}
+         $('#header').append('<div class="deco_box"></div>')
+         $('.deco_box').css({
+             position : 'absolute',
+             width : '100%',
+             left : 0,
+             top : '100%',
+             height : '200px',
+             backgroundColor :'rgb(241, 241, 241)',
+             display : 'none'
+         }).stop().slideDown(1000)
+    },
+    function(){
+        $('.depth2, .deco_box').stop().slideUp(1000)
+
+    }
+) */
+
 
 //선택한 depth1의 depth2 열리게하기
 /* $('.depth1 > li').on('click',function(){
@@ -74,7 +124,6 @@ function init2() {
       }
     })
   }); */
-
 
 //햄버거 버튼 클릭시 네비박스 나타내기
 $('.logo_nav .open_nav').on('click', function(){
@@ -91,6 +140,12 @@ $('.logo_nav .close_nav').on('click', function(){
     $('.logo_nav .nav .depth1 > li').removeClass('on')
 })
 
+
+
+
+
+
+
 /* 스크롤 탑값에 따라 헤더아래쪽 선 너비 변경하기*/
 var sct;
 var flag=true;
@@ -103,8 +158,10 @@ var flag=true;
             zIndex : 99999999, 
             opacity : 1,  
             width : wid,
+           
         });
-            
+        
+        
         // 스크롤탑값에 따라 헤더구역 고정시키기
         if ( sct >= 136 && flag ) {
             $('#header').css({
@@ -189,6 +246,13 @@ $('.topmenu a:nth-child(6)').on('click',function(e){
     $('#boxArea').load(url)
 })
 
+//nav li 클릭시 depth1의 첫번째 서브 페이지 연결
+/* $('.depth1 > li > a').on('click',function(e){
+    e.preventDefault()
+    var url = $(this).attr('href')
+    $('#containerBox').remove()
+    $('#boxArea').load(url)
+}) */
 //COMPANY의 depth2 페이지 연결
 $('.company > li > a').on('click',function(e){
     e.preventDefault()
