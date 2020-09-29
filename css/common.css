@@ -20,7 +20,7 @@ body { font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;}
 .topmenu a:nth-child(3) {color:plum;font-weight: 600}
 .logo_nav_outer {border-top: 1px solid #eee; }
 .logo_nav {position:relative; height:80px ;}
-.logo_nav .logo {/* display:inline-block; */ position:absolute; top:0; left: 0;text-align: center; padding: 14px 0;}
+.logo_nav .logo { display:block; position:absolute; top:0; left: 0;text-align: center; padding: 14px 0;}
 .logo_nav .logo strong { font-size: 23px;}
 .logo_nav .logo_text1{ font-size: 23px; font-weight:300;}
 .logo_nav .logo_text2{ font-size: 14px ; color: rgb(213,213,213)}
