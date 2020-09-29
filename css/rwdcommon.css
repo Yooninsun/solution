@@ -28,7 +28,7 @@
 }
 @media screen and ( max-width: 767px ) {
     .logo_nav {position:relative; height:90px ;}
-    .logo_nav .logo {display:inline-block; position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%);  padding: 14px 10px 40px; * margin-top: 20px}
+    .logo_nav .logo {display:inline-block; position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%);  padding: 14px 10px 40px;}
     .logo_nav .nav  { position: absolute; top: 100% ;right: 0; z-index: 9999 ;background: #fff;
     width: 30%;}
     .logo_nav .nav .depth1 { padding: 20px 0;}

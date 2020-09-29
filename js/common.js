@@ -33,8 +33,71 @@ function init(){
 $(window).on('resize', function(){
     init()
 })
+
+//nav메뉴 호버시 depth2 슬라이드 효과
+$('.depth1 > li').hover(
+    function(){
+        winWidth = $(window).innerWidth();
+        if(winWidth > 767){
+            $('.depth1').find('.depth2').stop().slideDown(1000).css({
+                zIndex: 99999
+            })
+            $('#header').append('<div class="deco_box"></div>');
+            /* $('.deco_box').slideDown(3000,'easeInQuint'); */
+            $('.deco_box').css({
+                position : 'absolute',
+                width : '100%',
+                left : 0,
+                top : '100%',
+                height : '220px',
+                backgroundColor :'rgb(241, 241, 241)',
+                display : 'none'
+            }).stop().slideDown(1000)
+        }
+    },
+    function(){
+        winWidth = $(window).innerWidth();
+        if(winWidth > 767){
+            $('.depth1').find('.depth2').stop().slideUp(1000);
+            $('.deco_box').stop().sldieup(1000);
+        } else {
+            $('.deco_box').hide();
+            $(this).find('.depth2').stop().slideUp(1000);
+        }
+    }
+
+
+);
+
+
+
+
+/* $('.nav > li').hover(
+    function(){
+        $(this).find('.depth2').slideDown(1000).css({
+            zIndex: 99999
+        })
+         $('#header').append('<div class="deco_box"></div>')
+         $('.deco_box').css({
+             position : 'absolute',
+             width : '100%',
+             left : 0,
+             top : '100%',
+             height : '200px',
+             backgroundColor :'rgb(241, 241, 241)',
+             display : 'none'
+         }).stop().slideDown(1000)
+    },
+    function(){
+        $('.depth2, .deco_box').stop().slideUp(1000)
+
+    }
+) */
+
+
+
 //선택한 depth1의 depth2 열리게하기
-/* $('.depth1 > li').on('click',function(){
+$('.depth1 > li').on('click',function(){
     $(this).toggleClass('on');
     $(this).find('.depth2').slideToggle(300);
     $(this).siblings().each(function(){
@@ -43,7 +106,7 @@ $(window).on('resize', function(){
         $(this).removeClass('on')
       }
     })
-  }); */
+  });
 
 //햄버거 버튼 클릭시 네비박스 나타내기
 $('.logo_nav .open_nav').on('click', function(){
@@ -63,29 +126,7 @@ $('.logo_nav .close_nav').on('click', function(){
 
 
 
-// 데코박스 width 100%로 주기
-$('.nav').hover(
-    function(){
-        $(this).find('.depth2').slideDown(1000).css({
-            zIndex: 99999
-        })
-         $('#header').append('<div class="deco_box"></div>');
-         /* $('.deco_box').slideDown(3000,'easeInQuint'); */
-         $('.deco_box').css({
-             position : 'absolute',
-             width : '100%',
-             left : 0,
-             top : '100%',
-             height : '200px',
-             backgroundColor :'rgb(241, 241, 241)',
-             display : 'none'
-         }).stop().slideDown(1000)
-    },
-    function(){
-        $('.depth2, .deco_box').stop().slideUp(1000)
 
-    }
-)
 
 
 /* 스크롤 탑값에 따라 헤더아래쪽 선 너비 변경하기*/
