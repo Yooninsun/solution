@@ -63,19 +63,6 @@ function init2() {
     } 
 }
 
-//선택한 depth1의 depth2 열리게하기
-/* $('.depth1 > li').on('click',function(){
-    $(this).toggleClass('on');
-    $(this).find('.depth2').slideToggle(300);
-    $(this).siblings().each(function(){
-      if ($(this).find('.depth2').css('display') === 'block'){
-        $(this).find('.depth2').slideUp(300);
-        $(this).removeClass('on')
-      }
-    })
-  }); */
-
-
 //햄버거 버튼 클릭시 네비박스 나타내기
 $('.logo_nav .open_nav').on('click', function(){
     $(this).next().stop().slideDown(300);
