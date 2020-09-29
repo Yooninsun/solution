@@ -19,12 +19,12 @@ init();
 var flag =true;
 function init(){
     var ww = $(window).width();
-    if( ww > 767  && flag){
-        $('.nav').show();
-        $('.open_nav, close_nav, .depth2').hide();
+    if( ww > 767  && flag ){
+        $('.logo_nav .nav').show();
+        $('.open_nav, .close_nav, .depth2').hide();
         flag = false;
     } else if (ww <= 767 && ! flag){
-        $('open_nav').show();
+        $('.open_nav').show();
         $('.nav, depth2, deco_box').hide();
         flag = true
     }
