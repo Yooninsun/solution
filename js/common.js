@@ -36,7 +36,7 @@ $(window).on('resize', function(){
 
 //햄버거 버튼 클릭시 네비박스 나타내기
 $('.logo_nav .open_nav').on('click', function(){
-    $(this).next().stop().sldieDown(300);
+    $(this).next().stop().slideDown(300);
     $(this).hide();
     $(this).nextAll('.close_nav').css({display:'block'});
 })
