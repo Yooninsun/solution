@@ -27,17 +27,18 @@
 
 }
 @media screen and ( max-width: 767px ) {
-    .logo_nav {position:relative; height:80px ;}
-    .logo_nav .logo {display:inline-block; position:absolute; top: 0; left:50%; transform: translateX(-50%);  padding: 14px 10px 40px; margin: 20px 0;}
+    .logo_nav {position:relative; height:90px ;}
+    .logo_nav .logo {display:inline-block; position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%);  padding: 14px 10px 40px; * margin-top: 20px}
     .logo_nav .nav  { position: absolute; top: 100% ;right: 0; z-index: 9999 ;background: #fff;
     width: 30%;}
     .logo_nav .nav .depth1 { padding: 20px 0;}
     .logo_nav .nav .depth1 > li {display:block; }
-    .logo_nav .nav .depth1 > li > a {display:inline-block; padding:10px 50px 20px;text-align: right; font-size: 24px;}
+    .logo_nav .nav .depth1 > li > a {display:inline-block; padding:10px 50px 20px;text-align: right; font-size: 20px;}
     .logo_nav .open_nav { display:block; position: absolute; top: 25px; right: 60px; font-size: 40px;} 
     .logo_nav .close_nav { display:none; position: absolute; top: 25px; right: 60px; font-size: 40px; } 
     .logo_nav .depth2 {position:static; top: 100%; left:0 ; text-align: center; display: block;  }
     .logo_nav .depth2 > li {line-height: 50px; }
-    .logo_nav .depth2 >  li > a {font-size: 18px ;z-index: 9;}
+    .logo_nav .depth2 >  li > a {font-size: 16px ;z-index: 9;}
+    .deco_box { display: none; }
 
 }

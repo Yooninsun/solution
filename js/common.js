@@ -1,6 +1,7 @@
 (function($){
 //메인 페이지 연결
 $('#boxArea').load('main.html')
+
 /* 로딩페이지 연결*/
 var minCnt = setInterval(minusCount,1000);
 var k = 3;
@@ -12,8 +13,31 @@ function minusCount(){
             return false;
         }
     }
+/*리사이즈 이벤트가 발생할때마다 윈도우 크기 구하기(리사이즈 부작용 없애기)*/
+init();
+
+var flag =true;
+function init(){
+    var ww = $(window).width();
+    if( ww > 767  && flag){
+        $('.nav').show();
+        $('.open_nav, close_nav, .depth2').hide();
+        flag = false;
+    } else if (ww <= 767 && ! flag){
+        $('open_nav').show();
+        $('.nav, depth2, deco_box').hide();
+        flag = true
+    }
+}
+
+$(window).on('resize', function(){
+    init()
+})
+
+
 // 데코박스 width 100%로 주기
 $('.nav').hover(
+
     function(){
         $(this).find('.depth2').slideDown(1000).css({
             zIndex: 99999
@@ -111,6 +135,20 @@ var flag=true;
 
 	});
 
+//햄버거 버튼 클릭시 네비박스 나타내기
+$('.logo_nav .open_nav').on('click', function(){
+    $(this).next().stop().sldieDown(300);
+    $(this).hide();
+    $(this).nextAll('.close_nav').css({display:'block'});
+})
+//닫기 버튼 클릭시 네비 박스 사라지기
+$('.logo_nav .close_nav').on('click', function(){
+    $(this).prev().stop().sldieup(300);
+    $(this).hide();
+    $(this).prevAll('.open_nav').css({display:'block'});
+    $('.depth2').hide();
+    $('logo_nav .nav .depth1 > li').removeClass('on')
+})
 
 
 
