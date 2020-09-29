@@ -37,7 +37,7 @@
     .logo_nav .open_nav { display:block; position: absolute; top: 25px; right: 60px; font-size: 40px;} 
     .logo_nav .close_nav { display:none; position: absolute; top: 25px; right: 60px; font-size: 40px; } 
     .logo_nav .depth2 {position:static; top: 100%; left:0 ; text-align: center; display: block;  }
-    .logo_nav .depth2 > li {line-height: 50px; }
+    .logo_nav .depth2 > li {line-height: 30px; }
     .logo_nav .depth2 >  li > a {font-size: 16px ;z-index: 9;}
     .deco_box { display: none; }
 

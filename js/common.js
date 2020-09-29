@@ -63,15 +63,8 @@ $('.logo_nav .close_nav').on('click', function(){
 
 
 
-
-
-
-
-
-
 // 데코박스 width 100%로 주기
 $('.nav').hover(
-
     function(){
         $(this).find('.depth2').slideDown(1000).css({
             zIndex: 99999
