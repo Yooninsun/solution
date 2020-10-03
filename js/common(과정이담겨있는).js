@@ -20,7 +20,7 @@ init2();
 function init2() {
     var ww = $(window).width()
     if(ww>767){
-        $('.depth1 >li ').hover(
+        $('.logo_nav .depth1 >li ').hover(
             function(){
                 $('.depth1 .depth2, .deco_box').stop().slideDown(300)
             },
@@ -29,7 +29,7 @@ function init2() {
             }
         )
     }else {
-        $('.depth1 >li ').on('click',function(){
+        $('.logo_nav depth1 >li ').on('click',function(){
             $(this).find('.depth2').stop().slideToggle(300);
             $(this).siblings().find('.depth2').stop().sldieup(300)
         })
