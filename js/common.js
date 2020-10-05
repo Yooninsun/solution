@@ -16,65 +16,59 @@ function minusCount(){
 
 //윈도우 크기에 따라 nav 메뉴 작동법 다르게하기
 init();
-init2();
+var flag = true;
+function init() {
+  var ww = $(window).width();
+  if (ww > 767 && flag) {
+    $('.logo_nav .nav').show();
+    $('.depth1 > li').removeClass('on');
+    $('.open_nav, .close_nav, .depth2').hide();
+    $('html').addClass('pc').removeClass('mobile');
+    flag = false;
+  } else if (ww <= 767 && !flag){
+    $('.open_nav').show();
+    $('.logo_nav .nav, .depth2, .deco_box').hide();
+    $('html').addClass('mobile').removeClass('pc');
+    flag = true
+  }
+}
+init();
 
 /*리사이즈 이벤트가 발생할때마다 윈도우 크기 구하기(리사이즈 부작용 없애기)*/
 $(window).on('resize', function(){
-    init()
-    init2()
+  init()
 })
 
 
-var flag =true;
-function init(){
-    var ww = $(window).width();
-    if( ww > 767  && flag ){
-        $('.logo_nav .nav').show();
-        $('.open_nav, .close_nav, .depth2').hide();
-        flag = false;
-    } else if (ww <= 767 && !flag){
-        $('.open_nav').show();
-        $('.logo_nav .nav, depth2, deco_box').hide();
-        flag = true
-    }
-}
 
-function init2() {
-    var ww = $(window).width()
-    if(ww>767){
-        $('.depth1 > li ').hover(
-            function(){
-                $('.depth1 .depth2, .deco_box').stop().slideDown(300)
-            },
-            function(){
-                $('.depth1 .depth2, .deco_box').stop().slideUp(300)
-            }
-        )
-    }else {
-        $('.depth1 > li ').on('click',function(){
-            $(this).find('.depth2').stop().slideToggle(300);
-            $(this).siblings().each(function(){
-            if ($(this).find('.depth2').css('display') === 'block'){
-                $(this).find('.depth2').slideUp(300);
-                $(this).removeClass('on')
-                }
-            })
-        })
-    } 
-}
-
-//선택한 depth1의 depth2 열리게하기
-/* $('.depth1 > li').on('click',function(){
+//mobile 화면에서 메뉴바 click 이벤트
+$('.depth1 > li').on('click', function() {
+  if ($('html').hasClass('mobile')) {
     $(this).toggleClass('on');
-    $(this).find('.depth2').slideToggle(300);
-    $(this).siblings().each(function(){
-      if ($(this).find('.depth2').css('display') === 'block'){
-        $(this).find('.depth2').slideUp(300);
-        $(this).removeClass('on')
+    $(this).find('.depth2').stop().slideToggle(300);
+    $(this).siblings().each(function() {
+      if ($(this).css('display') === 'block') {
+        $(this).find('.depth2').stop().slideUp(300);
+        $(this).removeClass('on');
       }
     })
-  }); */
-
+  }
+})
+//pc화면에서 메뉴바 hover 이벤트
+$('.depth1 > li').hover(
+  function() {
+    if ($('html').hasClass('pc')) {
+      $(this).find('.depth2').stop().slideDown(300);
+      $('.deco_box').stop().slideDown(300);
+    }
+  },
+  function() {
+    if ($('html').hasClass('pc')) {
+      $(this).find('.depth2').stop().slideUp(300);
+      $('.deco_box').stop().slideUp(300);
+    }
+  }
+)
 
 //햄버거 버튼 클릭시 네비박스 나타내기
 $('.logo_nav .open_nav').on('click', function(){
