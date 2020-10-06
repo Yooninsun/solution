@@ -25,7 +25,7 @@
   
   .slide_outer .slick-dots li { display: inline-block; margin: 0 5px; width: 50px; height: 8px; border-radius: 8px; position: relative;background: transparent; border: 1px solid #fff; }
   .slide_outer .slick-dots li button { color: transparent; position: absolute; top: 0; left: 0; width: 0; height: 8px; border-radius: 8px;}
-  .our_work .ourul .ourli { float: left; width: 46%; margin:10px auto ; transition: all 2s; text-align: center;}
+  .our_work .ourul .ourli { float: left; width: 48%; margin:10px auto ; transition: all 2s; text-align: center;}
   .banner { background: url(../image/onlines_bg.jpg) no-repeat; width:100%; height: 280px; background-size: cover; background-attachment: fixed; background-position: center; position: relative;}
   .banner .text {position: absolute; top:50%; left:50%; transform:translate(-50%,-50%);text-align: center;}
   .banner h2 {font-size: 1.6em; color: #fff;margin: 0 auto 20px;font-weight: 400; margin-bottom: 20px;}
