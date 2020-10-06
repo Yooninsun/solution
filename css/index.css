@@ -100,8 +100,8 @@ padding:10px 0 25px;}
 .banner.on h2 { animation: fadeInLeft 1s both 0.5s;}
 .banner p { margin: 0 0 10px;line-height: 180%; color:#fff; font-size: 15px;}    
 .banner.on p {animation: fadeInLeft 1s both 1s;}
-.banner.on span {animation: fadeInLeft 1s both 1.5s;}
-.banner span {color:#fff; border:1px solid #fff;padding: 8px 25px; font-size: 14px;line-height: 150%;display: inline-block;  margin: 10px auto 0;}
+.banner.on a > span {animation: fadeInLeft 1s both 1.5s;}
+.banner a > span {color:#fff; border:1px solid #fff;padding: 8px 25px; font-size: 14px;line-height: 150%;display: inline-block;  margin: 10px auto 0;}
 .banner span:hover {background: #fff; color: #000; }
 /********************<PRODUCT 구역시작>****************************/
 .product {padding:80px; position: relative;}

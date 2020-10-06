@@ -19,20 +19,24 @@ init();
 var flag = true;
 function init() {
   var ww = $(window).width();
-  if (ww > 767 && flag) {
-    $('.logo_nav .nav').show();
-    $('.depth1 > li').removeClass('on');
-    $('.open_nav, .close_nav, .depth2').hide();
+  if ( ww > 767 ) {
     $('html').addClass('pc').removeClass('mobile');
-    flag = false;
-  } else if (ww <= 767 && !flag){
-    $('.open_nav').show();
-    $('.logo_nav .nav, .depth2, .deco_box').hide();
-    $('html').addClass('mobile').removeClass('pc');
-    flag = true
+    if ( flag ) {
+      $('.logo_nav .nav').show();
+      $('.depth1 > li').removeClass('on');
+      $('.open_nav, .close_nav, .depth2').hide();
+      flag = false;
+    }
+  } else if  (ww <= 767 ){
+      $('html').addClass('mobile').removeClass('pc');
+    if ( !flag ) {
+      $('.open_nav').show();
+      $('.logo_nav .nav, .depth2, .deco_box').hide();
+      flag = true
+    }
   }
 }
-init();
+
 
 /*리사이즈 이벤트가 발생할때마다 윈도우 크기 구하기(리사이즈 부작용 없애기)*/
 $(window).on('resize', function(){
