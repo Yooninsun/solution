@@ -149,4 +149,5 @@ padding:10px 0 25px;}
 .board_box .btn_outer {text-align: center;}    
 .board_box .csbox .btn {font-size: 14px; line-height: 150%; color: #999; display: inline-block; margin: 5px; padding: 8px 20px; border: 1px solid #ddd; transition: all 2s;} 
 .board_box .csbox .btn:hover { background: #666; color: #fff; border: 1px #666 solid;}
-
+.board_box .map { position: relative;width: 100%; padding-top: 56.25%;}
+.board_box .map iframe { position: absolute; width: 100%; top: 0; left: 0}
