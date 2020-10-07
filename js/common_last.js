@@ -15,21 +15,22 @@ function minusCount(){
     }
 
 //윈도우 크기에 따라 nav 메뉴 작동법 다르게하기
-init();
+
 var flagInit = true;
+init();
 function init() {
   var ww = $(window).width();
   if ( ww > 767 ) {
     $('html').addClass('pc').removeClass('mobile');
-    if ( flag ) {
+    if ( flagInit ) {
       $('.logo_nav .nav').show();
       $('.depth1 > li').removeClass('on');
       $('.open_nav, .close_nav, .depth2').hide();
-      flag = flagInit;
+      flagInit = false;
     }
   } else if  (ww <= 767 ){
       $('html').addClass('mobile').removeClass('pc');
-    if ( !flag ) {
+    if ( !flagInit ) {
       $('.open_nav').show();
       $('.logo_nav .nav, .depth2, .deco_box').hide();
       flagInit = true

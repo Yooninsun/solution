@@ -79,9 +79,9 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   .join_form .info_content { display:inline-block; width:95%; vertical-align:top }
   .join_form .info_content textarea { height: 245px; width:95%;border:1px solid #eee;font-family: 'Roboto', 'Noto Sans KR', 'sans-serif'; font-size: 15px; letter-spacing: -2px;
     color: #444; padding: 10px; line-height: 1.5; resize:none; }
-
+  }
 @media screen and ( max-width: 767px) {
-  #join_page { padding: 80px 50px 100px;border-top: 1px solid #eee; }
+  #join_page { padding: 80px 20px 100px;border-top: 1px solid #eee; }
   #name_lbl, 
   #email_lbl, 
   .check_form #domain,
@@ -122,12 +122,13 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   #login_page { padding: 80px 200px 100px;border-top: 1px solid #eee;  }
   .login_form li { display: block; margin: 20px auto; text-align: center;}
   .login_form .id_lbl { display:inline-block; width: 60px;} 
+}
 
 @media screen and ( max-width: 1024px) {
   #login_page { padding: 80px 180px 100px;border-top: 1px solid #eee; font-size: 14px; }
   #id_lbl {width: 150px ; height:40px ; padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px;}
   #password_lbl {width:150px ; height:40px ;padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px; } 
- 
+} 
 @media screen and ( max-width: 767px) {
   #login_page { padding: 80px 50px 100px;border-top: 1px solid #eee; font-size: 12px;}
   .btn_box li span {border:1px solid #eee; padding: 8px 5px ;color:#666; transition: all 2s; }
