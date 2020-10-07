@@ -65,6 +65,7 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
 }
 
 @media screen and ( max-width: 1024px) {
+  #join_page { padding: 80px 110px 100px;border-top: 1px solid #eee; }
   .check_form #name_width,
   .check_form ul li > label { display: block; margin: 10px 0; }
   #name_lbl, 
@@ -73,6 +74,7 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   .check_form select {width:30% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
 
 @media screen and ( max-width: 767px) {
+  #join_page { padding: 80px 50px 100px;border-top: 1px solid #eee; }
   #name_lbl, 
   #email_lbl, 
   .check_form #domain,
