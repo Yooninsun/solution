@@ -29,13 +29,14 @@
 .join_form .info_list { padding:1px 0; border-bottom:1px solid #ccc;}
 .join_form .info_list li { padding:13px 0}
 .join_form .tit_lbl { display:inline-block; width:160px; line-height:45px; padding-left:20px; }
-.join_form .info_content { display:inline-block; width:79%; vertical-align:top }
+.join_form .info_content { display:inline-block; width:59%; vertical-align:top }
 .join_form .info_content input[type=text],
 .join_form .info_content input[type=password],
 .join_form .info_content input[type=date],
 .join_form .info_content select { height:38.5px; border: 1px solid #ddd; padding:5px 8px; vertical-align:top;  }
 .join_form .w320 { width:320px }
 .join_form .w160 { width:160px }
+.join_form .w120 { width:120px }
 .join_form .info_content span { line-height:45px; }
 .join_form .w70p { width:70% }
 .join_form .mb3 { margin:0px 0 5px}
@@ -54,9 +55,11 @@
 .join_form .marry_area input[type=checkbox] {display: none;}
 .join_form .info_content textarea { height: 245px; width:70%;border:1px solid #eee;font-family: 'Roboto', 'Noto Sans KR', 'sans-serif'; font-size: 15px; letter-spacing: -2px;
 color: #444; padding: 10px; line-height: 1.5; resize:none; }
-.join_form .txtarea p { display: inline-block; padding-left: 250px;}
+.join_form .txtarea { margin: 0 auto; text-align: center;}
+.join_form .txtarea p { display: inline-block;}
 .join_form .btn { margin-top:20px; text-align:center }    
 .join_form .btn input { width:80px; height:40px; background:rgb(102,102,102); color:rgb(229,229,229);border:none; border-radius:5px; font-size:18px; margin:0 20px }
+
 
 @media screen and ( max-width: 1166px) {
   #join_page { padding: 80px 160px 100px;border-top: 1px solid #eee; }
@@ -73,12 +76,23 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   .check_form #domain,
   .check_form select {width:30% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
 
+  .join_form .info_list label { display: block;}
+  .join_form .info_content { display:inline-block; width:95%; vertical-align:top }
+  .join_form .info_content textarea { height: 245px; width:95%;border:1px solid #eee;font-family: 'Roboto', 'Noto Sans KR', 'sans-serif'; font-size: 15px; letter-spacing: -2px;
+    color: #444; padding: 10px; line-height: 1.5; resize:none; }
+
 @media screen and ( max-width: 767px) {
   #join_page { padding: 80px 50px 100px;border-top: 1px solid #eee; }
   #name_lbl, 
   #email_lbl, 
   .check_form #domain,
   .check_form select {width:80% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
+  
+  .join_form .w320, 
+  .join_form #id_lbl,
+  .join_form #tel_lbl,
+  .join_form .w160,
+  .join_form .w120 { width: 90% }
 
 }
 
