@@ -92,7 +92,7 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   .join_form #id_lbl,
   .join_form #tel_lbl,
   .join_form .w160,
-  .join_form .w120 { width: 90% }
+  .join_form .w120 { display: block ;width: 90% }
 
 }
 
