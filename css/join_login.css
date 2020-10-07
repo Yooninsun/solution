@@ -1,21 +1,22 @@
 @charset "utf-8";
 /* **************************<회원가입페이지 CSS>**************************** */
-#join_page { padding: 80px 260px 100px;border-top: 1px solid #eee; }
+#join_page { padding: 80px 240px 100px;border-top: 1px solid #eee; }
 .check_outer {margin-bottom: 156px;  }
 .check_outer h2 { margin:20px 0 30px ;padding-left: 25px; font-size:30px ; color:#004A8D; position: relative; font-weight: 400;} 
 .check_outer h2:before {content: ''; position: absolute; top:50%; left:0;transform: translateY(-50%) ;border: 3px solid #004A8D; width: 4px; height: 4px;}
 .check_outer p { font-size: 14px; color: #666; line-height: 180%;
  padding-bottom: 20px;}
 .check_form { width: 96%; padding: 20px; background-color: #f1f1f1;
-    border: 1px #ddd solid; border-radius: 5px; margin-bottom: 10px;}
-.check_form li { display: inline-block; }    
+    border: 1px #ddd solid; border-radius: 5px; margin-bottom: 10px; margin: 0 auto;}
+.check_form li { display: inline-block; margin: 10px auto; }    
 .check_form li label {font-size: 14px;color:#666; padding: 0 5px;}
+.check_form #name_width { display: inline-block; width: 47.1px;}
 #name_lbl, 
 #email_lbl, 
 .check_form #domain,
 .check_form select {width:150px ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
-.check_form ul li span.check_btn { display:inline-block; width: 80px ; height:38px ; color: rgb(229,229,229) ; background: rgb(102,102,102); vertical-align: middle;}
-.check_form ul li a {display: block; text-align: center;padding:8.7px 0;}
+.check_form ul li span.check_btn { display:inline-block; width: 80px ; height:38px ; color: rgb(229,229,229) ; background: rgb(102,102,102); text-align: center; margin: 0 auto;}
+.check_form ul li a {display: block; text-align: center; padding:8.7px }
 
 ::placeholder {font-size: 14px; color: #666; line-height: 180%}
 .join_box h2 { margin:20px 0 30px ;padding-left: 25px; font-size:30px ; color:#004A8D; position: relative; font-weight: 400;} 
@@ -56,6 +57,29 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
 .join_form .txtarea p { display: inline-block; padding-left: 250px;}
 .join_form .btn { margin-top:20px; text-align:center }    
 .join_form .btn input { width:80px; height:40px; background:rgb(102,102,102); color:rgb(229,229,229);border:none; border-radius:5px; font-size:18px; margin:0 20px }
+
+@media screen and ( max-width: 1166px) {
+  #join_page { padding: 80px 160px 100px;border-top: 1px solid #eee; }
+  .check_form li { display: block; margin: 15PX auto;}    
+  .check_form ul li span.check_btn { display:block; width: 80px ; height:38px ; color: rgb(229,229,229) ; background: rgb(102,102,102); text-align: center; }
+}
+
+@media screen and ( max-width: 1024px) {
+  .check_form #name_width,
+  .check_form ul li > label { display: block; margin: 10px 0; }
+  #name_lbl, 
+  #email_lbl, 
+  .check_form #domain,
+  .check_form select {width:30% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
+
+@media screen and ( max-width: 767px) {
+  #name_lbl, 
+  #email_lbl, 
+  .check_form #domain,
+  .check_form select {width:80% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
+
+}
+
 
 /* ************************<로그인 페이지 CSS>*********************************** */
 #login_page { padding: 80px 260px 100px;border-top: 1px solid #eee; }
