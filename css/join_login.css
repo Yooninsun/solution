@@ -56,7 +56,6 @@
 .join_form .info_content textarea { height: 245px; width:70%;border:1px solid #eee;font-family: 'Roboto', 'Noto Sans KR', 'sans-serif'; font-size: 15px; letter-spacing: -2px;
 color: #444; padding: 10px; line-height: 1.5; resize:none; }
 .join_form .txtarea { margin: 0 auto; text-align: center;}
-.join_form .txtarea p { display: inline-block;}
 .join_form .btn { margin-top:20px; text-align:center }    
 .join_form .btn input { width:80px; height:40px; background:rgb(102,102,102); color:rgb(229,229,229);border:none; border-radius:5px; font-size:18px; margin:0 20px }
 
@@ -88,12 +87,14 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
   .check_form #domain,
   .check_form select {width:80% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
   
+  .join_form .w70p,
   .join_form .w320, 
   .join_form #id_lbl,
   .join_form #tel_lbl,
   .join_form .w160,
-  .join_form .w120 { display: block ;width: 90% }
+  .join_form .w120 { display: block ;width:85% }
 
+  .join_form .info_content span { display: none;}
 }
 
 

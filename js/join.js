@@ -1,5 +1,21 @@
     //입력 상자포커스 했을때 뒤에 알림 문구표시하기
 
+    var flagJoin = true;
+    initjoin();
+    function initjoin () {
+      if ($('html').hasClass('mobile') && flagJoin) {
+        $('#addr1').attr({placeholder: '도로명 주소'})
+        $('#addr2').attr({placeholder: '지번 주소'})
+        $('#addr3').attr({placeholder: '나머지 주소'})
+        flagJoin = false;
+      } else if ( $('html').hasClass('pc') && !flagJoin) {
+        $('#addr1').attr({placeholder: ''})
+        $('#addr2').attr({placeholder: ''})
+        $('#addr3').attr({placeholder: ''})      
+      }
+    }
+
+
     $('#name2').focus(function(){
         $(this).after('<strong> 필수입력 항목입니다.</strong>')
     }).blur(function(){
