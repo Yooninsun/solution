@@ -63,9 +63,9 @@
         
     //이름은 할글만
     var name = $('#name2').val();
-    var nameCh = /^[가-힣]$/;
+    var nameCh = /^[가-힣]+$/;
     //정규 표현식 .test(입력내용): 정규표현식에 맞는지 내용을 검사 
-    if (!(nameCh.test(name))){
+    if (!nameCh.test(name)){
         alert('한글이 아닙니다.');
         $('#name2').focus();
         $('#name2').select();
