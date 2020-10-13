@@ -14,27 +14,39 @@ function minusCount(){
         }
     }
 
-//윈도우 크기에 따라 nav 메뉴 작동법 다르게하기
+//스크롤바가 있을때랑 없을때   
+var deviceSize =767;
 
-var flagInit = true;
+function scrollOX (status) {
+ $('html').css({
+   overflowY:status
+ })
+ var htmlWidth = $('html').width()
+ return htmlWidth
+}
+var  swh = scrollOX('hidden');
+var sws = scrollOX('scroll');
+var swd = swh - sws ;
+
+if ( swd > 0 ) {
+  deviceSize = deviceSize - swd
+}
+
+//윈도우 크기에 따라 nav 메뉴 작동법 다르게하기
 init();
 function init() {
   var ww = $(window).width();
-  if ( ww > 767 ) {
+  if ( ww > deviceSize && !$('html').hasClass('pc') ) {
     $('html').addClass('pc').removeClass('mobile');
-    if ( flagInit ) {
-      $('.logo_nav .nav').show();
-      $('.depth1 > li').removeClass('on');
-      $('.open_nav, .close_nav, .depth2').hide();
-      flagInit = false;
-    }
-  } else if  (ww <= 767 ){
+    $('.logo_nav .nav').show();
+    $('.depth1 > li').removeClass('on');
+    $('.open_nav, .close_nav, .depth2').hide();
+
+  
+  } else if  (ww <= deviceSize && !$('html').hasClass('mobile')){
       $('html').addClass('mobile').removeClass('pc');
-    if ( !flagInit ) {
       $('.open_nav').show();
       $('.logo_nav .nav, .depth2, .deco_box').hide();
-      flagInit = true
-    }
   }
 }
 

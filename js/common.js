@@ -172,6 +172,7 @@ $('.topmenu a:nth-child(4)').on('click',function(e){
     var url = $(this).attr('href')
     $('#containerBox').remove()
     $('#boxArea').load(url)
+    
 })
 //회원가입 페이지 연결
 $('.topmenu a:nth-child(5)').on('click',function(e){
@@ -191,24 +192,30 @@ $('.topmenu a:nth-child(6)').on('click',function(e){
 
 //COMPANY의 depth2 페이지 연결
 $('.company > li > a').on('click',function(e){
-    e.preventDefault()
+  if ($('html').hasClass('pc') ){  
+  e.preventDefault()
     var url = $(this).attr('href')
     $('#containerBox').remove()
     $('#boxArea').load(url)
+  }  
 })
 //CONTACT의 depth2 페이지 연결
 $('.contact > li > a').on('click',function(e){
     e.preventDefault()
+    if ($('html').hasClass('pc') ){
     var url = $(this).attr('href')
     $('#containerBox').remove()
     $('#boxArea').load(url)
+    }  
 })
 //BOARD의 depth2 페이지 연결
 $('.board > li > a').on('click',function(e){
     e.preventDefault()
+    if ($('html').hasClass('pc') ){
     var url = $(this).attr('href')
     $('#containerBox').remove()
     $('#boxArea').load(url)
+    }  
 })
 
 
