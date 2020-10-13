@@ -11,7 +11,17 @@
 .page_tit {margin: 20px 30px; padding: 25px; font-size: 30px; font-weight: 400 ; color: #004A8D; position: relative}
 .page_tit::before {content: ''; position: absolute; top:50% ; left:0;transform: translateY(-50%) ;border: 3px solid #004A8D; width: 4px; height: 4px;}
 /* company page 공통 내용 끝 맨아래 줄 li:nth-child 숫자만 바꿔 쓰기*/
+@media screen and ( max-width: 1166px ) {
 
+}
+
+@media screen and ( max-width: 1024px ) {
+
+}
+
+@media screen and ( max-width: 767px ) {
+  
+}
 /* *************COMPANY의 welcome페이지************ */
 
 .company_text_box { margin-bottom:30px;}
