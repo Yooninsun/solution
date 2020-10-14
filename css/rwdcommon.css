@@ -11,6 +11,11 @@
 }
 
 @media screen and ( max-width: 1024px ) {
+    .topmenu { text-align:right ;padding:5px 8px; line-height:150% ;}
+    .topmenu a { padding-left: 1em; font-size: 13px}
+    .topmenu a:first-child { color:rgb(45,180,0);font-weight: 400;}
+    .topmenu a:nth-child(2) {color:red;font-weight: 400}
+    .topmenu a:nth-child(3) {color:plum;font-weight: 00}
     .logo_nav {position:relative; height:180px ;}
     .logo_nav .logo { text-align: center; margin: 0 auto;padding: 14px 0;}
     .logo_nav .nav { position: static; top:0 ;right: 10px;}
