@@ -7,12 +7,12 @@
 .company_bg ul  {width: 34.5%;  margin: 0 auto;}
 .company_bg li {/* display: inline-block; */ width: 24% ;font-size: 16px; color: #fff; padding: 20px 0; background:  rgba(13,48,120,0.8); line-height: 180%;float: left; text-align:center;}
 .company_bg li.on {background: #fff;color:#000}
-.company_cnt { margin: 0 260.333px; padding : 80px 0 100px;}
+.company_cnt { margin: 0 260px; padding : 80px 0 100px;}
 .page_tit {margin: 20px 30px; padding: 25px; font-size: 30px; font-weight: 400 ; color: #004A8D; position: relative}
 .page_tit::before {content: ''; position: absolute; top:50% ; left:0;transform: translateY(-50%) ;border: 3px solid #004A8D; width: 4px; height: 4px;}
 /* company page 공통 내용 끝 맨아래 줄 li:nth-child 숫자만 바꿔 쓰기*/
 @media screen and ( max-width: 1166px ) {
-
+  .company_cnt { margin: 0 160px; padding : 80px 0 100px;}
 }
 
 @media screen and ( max-width: 1024px ) {
@@ -29,7 +29,7 @@
 .company_text_box .ment { margin: 30px 0 10px; font-size: 15px; color:#666 ;}
 .company_text_box li {font-size:15px ; color: #666; padding: 2px 0;}
 .company_text_box li b {color :#000; line-height: 180%;margin-right:5px;}
-.sample_img {width: 100%;} 
+.sample_img {max-width: 100%; overflow: hidden;} 
 
 /* *************COMPANY의 history페이지************ */
 .history_cnt { margin: 0 260.333px; padding : 80px 0 100px}
