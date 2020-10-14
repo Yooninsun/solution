@@ -17,11 +17,25 @@
 /* company page 공통 내용 끝 맨아래 줄 li:nth-child 숫자만 바꿔 쓰기*/
 @media screen and ( max-width: 1166px ) {
   .company_cnt { margin: 0 120px; padding : 80px 0 100px;}
+  .company_text_box h3 { font-size: 1.2em;}
+  .company_text_box .ment { font-size: 14px;}
+  .company_text_box li {font-size:14px ; color: #666; padding: 2px 0;}
+
+  .history_cnt { margin: 0 120px; padding : 80px 0 100px;}
+  .years h3 { font-size: 1.2em;}
+  .history_text_box .ment { font-size: 14px; }
+
+  .map_cnt{ margin: 0 120px; padding : 80px 0 100px;}
+
 }
 
 @media screen and ( max-width: 1024px ) {
   .company_cnt { margin: 0 80px; padding : 80px 0 100px;}
   .page_tit {font-size: 28px}
+
+  .history_cnt { margin: 0 80px; padding : 80px 0 100px;}
+
+  .map_cnt { margin: 0 80px; padding : 80px 0 100px;}
 }
 
 @media screen and ( max-width: 800px ) {
@@ -30,9 +44,19 @@
 
   .company_bg .mobile_menu { display: block; background: transparent; }
   .company_bg .mobile_menu li {display: inline-block; margin:4px; height: auto; }
+
+  .history_cnt { margin: 0 64px; padding : 80px 0 100px;}
+
+  .map_cnt { margin: 0 64px; padding : 80px 0 100px;}
+
+
 }
 @media screen and ( max-width: 767px ) {
   .company_cnt { margin: 0 20px; padding : 80px 0 100px;}
+
+  .history_cnt { margin: 0 20px; padding : 80px 0 100px;}
+
+  .map_cnt { margin: 0 20px; padding : 80px 0 100px;}
 }
 /* *************COMPANY의 welcome페이지************ */
 
@@ -43,24 +67,6 @@
 .company_text_box li b {color :#000; line-height: 180%;margin-right:5px;}
 .sample_img {max-width: 100%; overflow: hidden;} 
 
-@media screen and ( max-width: 1166px ) {
-  .company_text_box h3 { font-size: 1.2em;}
-  .company_text_box .ment { font-size: 14px;}
-  .company_text_box li {font-size:14px ; color: #666; padding: 2px 0;}
-}
-
-@media screen and ( max-width: 1024px ) {
-  
-}
-
-@media screen and ( max-width: 800px ) {
-  
-
-
-}
-@media screen and ( max-width: 767px ) {
-  
-}
 /* *************COMPANY의 history페이지************ */
 .history_cnt { margin: 0 260.333px; padding : 80px 0 100px}
 .history_text_box {margin-bottom:30px;}
@@ -69,42 +75,9 @@
 .years .no {color: #7ebec5;font-weight: 600; font-size: 15px;}
 .years .lorem { padding-left: 10px ; font-size: 15px; color: #666; line-height: 180%;}
 
-@media screen and ( max-width: 1166px ) {
-  .history_cnt { margin: 0 120px; padding : 80px 0 100px;}
-  .years h3 { font-size: 1.2em;}
-  .history_text_box .ment { font-size: 14px; }
-}
-
-@media screen and ( max-width: 1024px ) {
-  .history_cnt { margin: 0 80px; padding : 80px 0 100px;}
-}
-
-@media screen and ( max-width: 800px ) {
-  .history_cnt { margin: 0 64px; padding : 80px 0 100px;}
-}
-@media screen and ( max-width: 767px ) {
-  .history_cnt { margin: 0 20px; padding : 80px 0 100px;}
-}
-
-
 /* *************COMPANY의 map페이지************ */
 .map_cnt { margin: 0 260.333px; padding : 80px 0 10px;}
 .map_text_box {margin-bottom:30px; position: relative; height: 650px;}
 .map_text_box iframe { height: 450px; width: 100%; position: absolute; left: 0px; top: 0px;touch-action: pan-x pan-y;}
 .location { font-size: 15px; color:#666 ; z-index: 999; position: absolute; left: 0; bottom:20%;}
 
-@media screen and ( max-width: 1166px ) {
-.map_cnt{ margin: 0 120px; padding : 80px 0 100px;}
-}
-
-@media screen and ( max-width: 1024px ) {
-  .map_cnt { margin: 0 80px; padding : 80px 0 100px;}
-}
-
-@media screen and ( max-width: 800px ) {
-  .map_cnt { margin: 0 64px; padding : 80px 0 100px;}
-  
-}
-@media screen and ( max-width: 767px ) {
-  .map_cnt { margin: 0 20px; padding : 80px 0 100px;}
-}
