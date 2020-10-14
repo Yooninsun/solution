@@ -16,8 +16,8 @@
       $('#containerBox').remove();
         $('#boxArea').load(url);
         //클릭시 배경색 바꿔주기
-        $(this).parent().addClass('on');
-        $(this).parent().siblings().removeClass('on');
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
     })
 
 
