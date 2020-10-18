@@ -3,24 +3,41 @@
         <div class="sub_menus">
             <div class="board_bg cf">
                 <h1>COMMUNITY</h1>
+                <ul class="mobile_menu">
+                  <li class="on">
+                    <a href="notice.html">공지사항</a>
+                  </li>
+                  <li>
+                    <a href="#">뉴스&amp;보도자료</a>
+                  </li>  
+                  <li>
+                    <a href="QnA.html">문의답변</a>
+                  </li>  
+                  <li>
+                    <a href="#">자주하는질문</a>
+                  </li>
+                  <li>
+                    <a href="#">매장안내</a>
+                  </li>
+                </ul>
                 <div class="menu_text">
-                    <ul>
-                        <li class='on'>
-                            <a href="notice.html">공지사항</a>
-                        </li>
-                        <li >
-                            <a href="#">뉴스&amp;보도자료</a>
-                        </li>
-                        <li>
-                            <a href="QnA.html">문의답변</a>
-                        </li>
-                        <li>
-                            <a href="#">자주하는질문</a>
-                        </li>
-                        <li>
-                            <a href="#">매장안내</a>
-                        </li>
-                    </ul>
+                  <ul>
+                      <li class='on'>
+                          <a href="notice.html">공지사항</a>
+                      </li>
+                      <li >
+                          <a href="#">뉴스&amp;보도자료</a>
+                      </li>
+                      <li>
+                          <a href="QnA.html">문의답변</a>
+                      </li>
+                      <li>
+                          <a href="#">자주하는질문</a>
+                      </li>
+                      <li>
+                          <a href="#">매장안내</a>
+                      </li>
+                  </ul>
                 </div>
             </div>
             <div class="notice_cnt">
@@ -130,5 +147,16 @@
     $('#containerBox').remove()
     $('#boxArea').load(url)
 })    
+
+$('.board_bg .mobile_menu > li').on('click', function(e) {
+      e.preventDefault();
+      var url = $(this).attr('href');
+      $('#containerBox').remove();
+        $('#boxArea').load(url);
+        //클릭시 배경색 바꿔주기
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
+    })
+
 })(jQuery)
 </script>

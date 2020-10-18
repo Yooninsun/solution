@@ -99,23 +99,23 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
 @media screen and ( max-width: 1024px) {
   #join_page { padding: 80px 110px 100px;border-top: 1px solid #eee; }
   .check_form #name_width,
-  .check_form ul li > label { display: block; margin: 10px 0; }
+/*   .check_form ul li > label { display: block; margin: 10px 0; } */
   #name_lbl, 
   #email_lbl, 
   .check_form #domain,
   .check_form select {width:30% ; height:38.5px ;padding: 5px 8px;border: 1px #ddd solid }
 
+  ::placeholder {font-size: 12px; color: #666; line-height: 180%}
   .join_form .info_list label { display: block;}
   .join_form .info_content { display:inline-block; width:95%; vertical-align:top }
   .join_form .info_content textarea { height: 245px; width:95%;border:1px solid #eee;font-family: 'Roboto', 'Noto Sans KR', 'sans-serif'; font-size: 15px; letter-spacing: -2px;
     color: #444; padding: 10px; line-height: 1.5; resize:none; }
 
-  #login_page { padding: 80px 120px 100px;border-top: 1px solid #eee;  }
+  #login_page { padding: 80px 160px 100px;border-top: 1px solid #eee;  }
   #login_page .login_outer > p { display: none;}
-  #id_lbl {width: 250px ; height:40px ; padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px;}
-  #password_lbl {width:250px ; height:40px ;padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px; } 
-  .login_form ul li:last-child { display:block; }  
-
+  #id_lbl {width: 250px ; height:40px ; padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px; }
+  #password_lbl {width:250px ; height:40px ;padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px;  } 
+  .login_form ul li { display:block; }
   
   }
 
@@ -137,12 +137,11 @@ color: #444; padding: 10px; line-height: 1.5; resize:none; }
 
   #login_page { padding: 80px 20px 100px;border-top: 1px solid #eee; font-size: 12px;}
   .btn_box li span {border:1px solid #eee; padding: 8px 5px ;color:#666; transition: all 2s; }
-  #id_lbl {width: 200px ; height:40px ; padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px;}
-  #password_lbl {width:200px ; height:40px ;padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px; } 
+  #id_lbl {width: 250px ; height:40px ; padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px;}
+  #password_lbl {width:250px ; height:40px ;padding: 5px 8px;border: 1px #ddd solid; margin-top: 5px; } 
   .login_form li label {width: 100%; display: inline-block; text-align: left;}
-  #id_lbl {display: block;}
-  #password_lbl {display: block;}
-
+  #id_lbl {display: block }
+  #password_lbl {display: block  } 
   
 
 }

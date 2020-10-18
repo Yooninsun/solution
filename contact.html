@@ -3,24 +3,31 @@
             <div class="sub_menus">
                 <div class="contact_bg cf">
                     <h1>INQUIRY</h1>
-                    <ul>
-                        <li>
-                            <a href="contact.html">온라인 문의</a>
-                        </li>
-                    </ul>
+                    <ul class="mobile_menu">
+                      <li class="on">
+                        <a href="contact.html">온라인문의</a>
+                      </li>
+                    </ul>  
+                    <div class="menu_text">
+                      <ul>
+                          <li>
+                              <a href="contact.html">온라인 문의</a>
+                          </li>
+                      </ul>
+                    </div>
                 </div>
                 <div class="counsel_box row">
-                    <h2 class="page_tit">견적문의하기</h2>
+                    <h2 class="page_tit">견적문의</h2>
                     <form action="#" method="post" class="counsel_form">
                         <fieldset>
                             <legend>견적문의 메일보내기</legend>
                             <table class="info_text">
                                 <tr>
-                                    <td><label for="name_lbl" class="tit_lbl">이름(업체명)</label></td>
+                                    <td><label for="name_lbl" class="tit_lbl">이름<span>(업체명)</span></label></td>
                                     <td><input type="text" id="name_lbl" class="name_box"></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="email_lbl" class="tit_lbl">답변받을 이메일</label></td>
+                                    <td><label for="email_lbl" class="tit_lbl"><span>답변받을</span>이메일</label></td>
                                     <td><input type="text" id="email_lbl" class="email_box"></td>
                                 </tr>
                                 <tr>
@@ -52,6 +59,16 @@
         $('#containerBox').remove()
         $('#boxArea').load(url)
     })    
+
+    $('.contact_bg .mobile_menu > li').on('click', function(e) {
+      e.preventDefault();
+      var url = $(this).attr('href');
+      $('#containerBox').remove();
+        $('#boxArea').load(url);
+        //클릭시 배경색 바꿔주기
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
+    })
 })(jQuery)
     </script>
     
