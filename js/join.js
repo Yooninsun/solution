@@ -46,7 +46,7 @@
             if($(this).val() === 'nochoice'){
                 $('#domain').val('')
                 $('#domain').attr('disabled',true)
-            } else if ($(this).val === 'self' ){
+            } else if ($(this).val() === 'self' ){
                 $('#domain').val('')
                 $('#domain').attr('disabled',false)
             } else {
